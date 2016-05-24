@@ -1,3 +1,13 @@
+'use strict';
+
+var gulp              = require('gulp'),
+    imagemin          = require('css-imagemin'),
+    sass              = require('gulp-sass'),
+    cssmin            = require('gulp-cssmin'),
+    rename            = require('gulp-rename'),
+    prefix            = require('gulp-autoprefixer'),
+    browserSync       = require('browser-sync').create();
+
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
@@ -18,6 +28,12 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });
+
+gulp.task('imagemin', function ( {
+  return gulp.src('src/img/**/*.jpg')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'))
+}));
 
 gulp.task('watch', function () {
   gulp.watch('src/scss/*.scss', ['sass']);
