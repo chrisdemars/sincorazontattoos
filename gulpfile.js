@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp              = require('gulp'),
-    imagemin          = require('css-imagemin'),
+    imagemin          = require('gulp-imagemin'),
     sass              = require('gulp-sass'),
     cssmin            = require('gulp-cssmin'),
     rename            = require('gulp-rename'),
@@ -29,11 +29,11 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('imagemin', function ( {
+gulp.task('imagemin', function () {
   return gulp.src('src/img/**/*.jpg')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/img'))
-}));
+    .pipe(gulp.dest('dist/img'));
+});
 
 gulp.task('watch', function () {
   gulp.watch('src/scss/*.scss', ['sass']);
