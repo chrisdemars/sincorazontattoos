@@ -76,3 +76,6 @@ jspm_packages
 
 ### Git ###
 *.orig
+
+### markdown ###
+roadmap.md
