@@ -35,6 +35,8 @@ html,
 body {
   margin: 0 auto;
   color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -54,7 +56,7 @@ a {
   rgba(0, 0, 0, 6.5),
   rgba(0, 0, 0, 0.8)
   ),
-  url(/src/img/intro-ink.jpg) no-repeat;
+  url(/dist/img/intro-ink-secondary.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -62,7 +64,6 @@ a {
   margin-top: 190px;
   text-align: center;
   font-size: 12em;
-  font-family: 'Aguafina Script', cursive;
   color: #000000;
   -webkit-text-stroke: 3px #ffffff;
 }
@@ -75,14 +76,14 @@ a {
 	margin-left: -30px;
   margin-bottom: 50px;
 	bottom: 20px;
-}
 
   & path {
-	stroke: #ffffff;
-	fill: transparent;
-	stroke-width: 1px;
-	animation: arrow 2s infinite;
-	-webkit-animation: arrow 2s infinite;
+    stroke: #ffffff;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
 }
 
 
@@ -96,11 +97,11 @@ a {
   height: 100%;
   // @include section-size;
   background:
-  linear-gradient(
-  rgba(0, 0, 0, 6.5),
-  rgba(0, 0, 0, 0.8)
-  )
-  url(/src/img/bio-machine.jpg) no-repeat center center fixed;
+    linear-gradient(
+    rgba(0, 0, 0, 6.5),
+    rgba(0, 0, 0, 0.8)
+    )
+    url(/dist/img/bio-machine.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -108,9 +109,9 @@ a {
 padding: 20px 0;
 }
 
-.bio__image {
-
-}
+// .bio__image {
+//
+// }
 
 .bio__info-container {
   padding-top: 235px;
@@ -118,7 +119,7 @@ padding: 20px 0;
 
 .bio__info-copy {
   font-size: 20px;
-  line-height: 1.2em;
+  line-height: 1.6em;
 }
 
 /*
@@ -128,6 +129,13 @@ padding: 20px 0;
 */
 
 .news {
+  background:
+    linear-gradient(
+    rgba(0, 0, 0, 6.5),
+    rgba(0, 0, 0, 0.8)
+    ),
+    url(/dist/img/intro-ink.jpg) no-repeat center center fixed;
+  background-size: cover;
   background-color: #000000;
 }
 
@@ -249,6 +257,12 @@ Media Queries
   }
 }
 
+@media screen and (min-width: 568px) {
+  .intro__arrows {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .intro {
     height: 100vh;
@@ -263,21 +277,4 @@ Media Queries
   .bio__info-container {
     padding-top: 140px;
   }
-}
-
-.arrows {
-	width: 60px;
-	height: 72px;
-	position: absolute;
-	left: 50%;
-	margin-left: -30px;
-	bottom: 20px;
-}
-
-.arrows path {
-	stroke: #ffffff;
-	fill: transparent;
-	stroke-width: 1px;
-	animation: arrow 2s infinite;
-	-webkit-animation: arrow 2s infinite;
 }
