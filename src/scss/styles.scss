@@ -1,7 +1,7 @@
 /*
-================================================================
-Custom Font(s)
-================================================================
+* ================================================================
+* Custom Font(s)
+* ================================================================
 */
 
 /*
@@ -26,9 +26,9 @@ Mixins
 }
 
 /*
-================================================================
-Global
-================================================================
+* ================================================================
+* Global
+* ================================================================
 */
 
 html,
@@ -66,6 +66,25 @@ a {
   color: #000000;
   -webkit-text-stroke: 3px #ffffff;
 }
+
+.intro__arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+  margin-bottom: 50px;
+	bottom: 20px;
+}
+
+  & path {
+	stroke: #ffffff;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
 
 
 /*
@@ -228,4 +247,37 @@ Media Queries
   .news__image {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    height: 100vh;
+  }
+
+  .bio__info-container {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bio__info-container {
+    padding-top: 140px;
+  }
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #ffffff;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
 }
