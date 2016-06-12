@@ -4,15 +4,6 @@ Custom Font(s)
 ================================================================
 */
 
-// @font-face {
-//     font-family: 'angilla_tattoo_personal_useRg';
-//     src: url('../fonts/angillatattoo_personal_use_only-webfont.woff2') format('woff2'),
-//          url('../fonts/angillatattoo_personal_use_only-webfont.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-//
-// }
-
 /*
 ================================================================
 Variables
@@ -46,6 +37,10 @@ body {
   color: #ffffff;
 }
 
+a {
+  color: #4e0b0b;
+}
+
 /*
 ================================================================
 1. Intro
@@ -63,7 +58,7 @@ body {
   background-size: cover;
 }
 
-.site-title {
+.intro-title {
   margin-top: 190px;
   text-align: center;
   font-size: 12em;
@@ -79,41 +74,68 @@ body {
 ================================================================
 */
 .bio {
-  position: relative;
-  @include section-size;
+  height: 100%;
+  // @include section-size;
   background:
   linear-gradient(
   rgba(0, 0, 0, 6.5),
   rgba(0, 0, 0, 0.8)
   )
-  // url(/src/img/bio-machine.jpg);
-  // background-size: cover;
+  url(/src/img/bio-machine.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 .bio__image-container {
-  position: relative;
+padding: 20px 0;
 }
 
 .bio__image {
-  position: absolute;
-  top: 50vh;
-  left: 50vh;
-  @include center;
+
 }
 
 .bio__info-container {
-  position: relative;
+  padding-top: 235px;
 }
 
 .bio__info-copy {
-
+  font-size: 20px;
+  line-height: 1.2em;
 }
-
-
 
 /*
 ================================================================
-3. Work
+3. News
+================================================================
+*/
+
+.news {
+  background-color: #000000;
+}
+
+.news__container {
+  padding: 20px 0;
+}
+
+.news__heading {
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.news__copy {
+  text-align: center;
+  color: #ffffff;
+}
+
+.news__image {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/*
+================================================================
+4. Work
 ================================================================
 */
 
@@ -134,7 +156,7 @@ body {
 
 /*
 ================================================================
-4. Contact (footer)
+5. Contact (footer)
 ================================================================
 */
 
@@ -184,5 +206,26 @@ Helpers
 */
 
 .center {
+  margin: 0 auto;
   text-align: center;
+}
+
+/*
+================================================================
+Media Queries
+================================================================
+*/
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .intro {
+    height: 25vh;
+  }
+
+  .bio__info-container {
+    padding: 20px 0;
+  }
+
+  .news__image {
+    width: 100%;
+  }
 }
