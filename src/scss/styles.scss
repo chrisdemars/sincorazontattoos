@@ -118,18 +118,15 @@ body {
 */
 
 .work {
-  @include section-size;
   background-color: #4e0b0b;
-  height: 1000px;
 }
 
 .work__image-container {
-  margin-top: 50px;
+  position: relative;
+  padding-top: 25px;
 }
 
 .work__image {
-  width: 400px;
-  height: 300px;
   display: inline-block;
   border: solid 1px #000000;
   margin-bottom: 20px;
@@ -142,6 +139,50 @@ body {
 */
 
 .contact {
-  height: 100px;
-  background-color: pink;
+  background-color: #B38A2D;
+}
+
+.contact__copy {
+  color: #000000;
+  text-align: center;
+}
+
+.contact__copy--small {
+  font-size: 16px;
+}
+
+.contact__copy--large {
+  font-size: 30px;
+}
+
+.contact__copy--padding-top {
+  padding-top: 20px;
+}
+
+.contact__phone-number {
+  color: #4e0b0b;
+}
+
+.contact__social-container {
+  text-align: center;
+}
+
+.contact__social-icon {
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.contact__address {
+  text-align: center;
+  color: #000000;
+}
+
+/*
+================================================================
+Helpers
+================================================================
+*/
+
+.center {
+  text-align: center;
 }
