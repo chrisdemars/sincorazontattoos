@@ -6,6 +6,7 @@ var gulp              = require('gulp'),
     cssmin            = require('gulp-cssmin'),
     rename            = require('gulp-rename'),
     prefix            = require('gulp-autoprefixer'),
+    uglify            = require('gulp-uglify'),
     browserSync       = require('browser-sync').create();
 
 // Static Server + watching scss/html files
@@ -17,9 +18,11 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/js/*.js', ['js']);
     gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
+// Configure CSS.
 gulp.task('sass', function () {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
@@ -30,15 +33,27 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('imagemin', function () {
+// Configure JS.
+gulp.task('js', function() {
+  return gulp.src('src/js/**/*.js')
+    .pipe(uglify())
+    .pipe(concat('script.js'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js'));
+});
+
+// Configure image stuff.
+gulp.task('images', function () {
   return gulp.src('src/img/**/*.jpg')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 });
 
+// Watch the things.
 gulp.task('watch', function () {
   gulp.watch('src/scss/*.scss', ['sass']);
+  gulp.watch('src/js/*.js', ['js']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'serve']);
+gulp.task('default', ['sass', 'js', 'serve']);

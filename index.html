@@ -7,6 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Aguafina+Script' rel='stylesheet' type='text/css'>
+    <link href="dist/css/lightbox.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="dist/css/styles.min.css">
     <title>Sin Corazon Tattoos | Mark Mattias</title>
   </head>
@@ -23,7 +24,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <div class="bio__image-container">
-              <img src="src/img/elephants.jpg" class="img-responsive bio__image">
+              <img src="src/img/butterfly.jpg" class="img-responsive bio__image">
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
@@ -81,7 +82,10 @@
               <img class="img-responsive work__image" src="src/img/shoulder-skull.jpg" alt="">
             </div>
             <div class="col-lg-3 col-md-4 col-s-6 col-xs-12 thumb">
-              <img class="img-responsive work__image" src="src/img/elephant.jpg" alt="">
+              <a href="src/img/elephant.jpg" alt="Black and gray elephant" data-lightbox="Black and gray elephant" data-title="Black and gray elephant">
+                  <img src="src/img/elephant.jpg" alt="Black and gray elephant" data-lightbox="Black and grey elephant" class="img-responsive work__image">
+              </a>
+              <!-- <img class="img-responsive work__image" src="src/img/elephant.jpg" alt=""> -->
             </div>
           </div>
         </div>
@@ -107,12 +111,15 @@
               17820 Telegraph Rd, Brownstown Charter Twp, MI 48174
             </address>
             <p class="contact__copy contact__copy--small">
-              Tattoos by Mark Matias | &copy; 2016 <a href="chrisdemars.com" target="_blank">Chris DeMars</a>
+              Tattoos by Mark Matias @ Kustom Kulture | &copy; 2016 <a href="chrisdemars.com" target="_blank">Chris DeMars</a>
             </p>
           </div>
         </div>
       </div>
     </footer>
+    <!-- Font Awesome CDN -->
     <script src="https://use.fontawesome.com/53df9a6ea4.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>
