@@ -1,5 +1,20 @@
 /*
 ================================================================
+Custom Font(s)
+================================================================
+*/
+
+// @font-face {
+//     font-family: 'angilla_tattoo_personal_useRg';
+//     src: url('../fonts/angillatattoo_personal_use_only-webfont.woff2') format('woff2'),
+//          url('../fonts/angillatattoo_personal_use_only-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//
+// }
+
+/*
+================================================================
 Variables
 ================================================================
 */
@@ -15,6 +30,10 @@ Mixins
   width: 100%;
 }
 
+@mixin center {
+  transform: translate(-100%, -50%);
+}
+
 /*
 ================================================================
 Global
@@ -24,6 +43,7 @@ Global
 html,
 body {
   margin: 0 auto;
+  color: #ffffff;
 }
 
 /*
@@ -43,6 +63,15 @@ body {
   background-size: cover;
 }
 
+.site-title {
+  margin-top: 190px;
+  text-align: center;
+  font-size: 12em;
+  font-family: 'Aguafina Script', cursive;
+  color: #000000;
+  -webkit-text-stroke: 3px #ffffff;
+}
+
 
 /*
 ================================================================
@@ -50,15 +79,36 @@ body {
 ================================================================
 */
 .bio {
+  position: relative;
   @include section-size;
   background:
   linear-gradient(
   rgba(0, 0, 0, 6.5),
   rgba(0, 0, 0, 0.8)
-  ),
-  url(/src/img/bio-machine.jpg);
-  background-size: cover;
+  )
+  // url(/src/img/bio-machine.jpg);
+  // background-size: cover;
 }
+
+.bio__image-container {
+  position: relative;
+}
+
+.bio__image {
+  position: absolute;
+  top: 50vh;
+  left: 50vh;
+  @include center;
+}
+
+.bio__info-container {
+  position: relative;
+}
+
+.bio__info-copy {
+
+}
+
 
 
 /*
@@ -79,6 +129,6 @@ body {
 */
 
 .contact {
-  @include section-size;
+  height: 100px;
   background-color: pink;
 }
