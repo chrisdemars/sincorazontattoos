@@ -119,7 +119,20 @@ body {
 
 .work {
   @include section-size;
-  background-color: red;
+  background-color: #4e0b0b;
+  height: 1000px;
+}
+
+.work__image-container {
+  margin-top: 50px;
+}
+
+.work__image {
+  width: 400px;
+  height: 300px;
+  display: inline-block;
+  border: solid 1px #000000;
+  margin-bottom: 20px;
 }
 
 /*
