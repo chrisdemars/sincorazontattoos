@@ -10,6 +10,15 @@ Variables
 ================================================================
 */
 
+$primary: #000000;
+
+$secondary: #4e0b0b;
+
+$tertiary: #B38A2D;
+
+$white: #ffffff;
+
+
 /*
 ================================================================
 Mixins
@@ -34,13 +43,13 @@ Mixins
 html,
 body {
   margin: 0 auto;
-  color: #ffffff;
+  color: $white;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
 a {
-  color: #4e0b0b;
+  color: $secondary;
 }
 
 /*
@@ -64,8 +73,8 @@ a {
   margin-top: 190px;
   text-align: center;
   font-size: 12em;
-  color: #000000;
-  -webkit-text-stroke: 3px #ffffff;
+  color: $primary;
+  -webkit-text-stroke: 3px $white;
 }
 
 .intro__arrows {
@@ -78,7 +87,7 @@ a {
 	bottom: 20px;
 
   & path {
-    stroke: #ffffff;
+    stroke: $white;
     fill: transparent;
     stroke-width: 1px;
     animation: arrow 2s infinite;
@@ -136,7 +145,7 @@ padding: 20px 0;
     ),
     url(/dist/img/intro-ink.jpg) no-repeat center center fixed;
   background-size: cover;
-  background-color: #000000;
+  background-color: $primary;
 }
 
 .news__container {
@@ -146,12 +155,12 @@ padding: 20px 0;
 .news__heading {
   text-align: center;
   font-size: 20px;
-  color: #ffffff;
+  color: $white;
 }
 
 .news__copy {
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
 .news__image {
@@ -167,7 +176,7 @@ padding: 20px 0;
 */
 
 .work {
-  background-color: #4e0b0b;
+  background-color: $secondary;
 }
 
 .work__image-container {
@@ -177,22 +186,83 @@ padding: 20px 0;
 
 .work__image {
   display: inline-block;
-  border: solid 1px #000000;
+  border: solid 1px $primary;
   margin-bottom: 20px;
 }
 
 /*
 ================================================================
-5. Contact (footer)
+5. Contact - Form
+================================================================
+*/
+
+.contact-form {
+  background-color: $white;
+  color: $primary;
+}
+
+.contact-form__container {
+  padding: 20px 0;
+}
+
+.contact-form__heading {
+  color: $primary;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    border: 3px solid $primary;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $tertiary;
+    }
+  }
+
+  input[type=submit] {
+    background: $primary;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    &:focus,
+    &:hover {
+      background: $tertiary;
+      border-color: $tertiary;
+      color: $primary;
+    }
+  }
+
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+}
+
+/*
+================================================================
+6. Contact (footer)
 ================================================================
 */
 
 .contact {
-  background-color: #B38A2D;
+  background-color: $tertiary;
 }
 
 .contact__copy {
-  color: #000000;
+  color: $primary;
   text-align: center;
 }
 
@@ -209,7 +279,7 @@ padding: 20px 0;
 }
 
 .contact__phone-number {
-  color: #4e0b0b;
+  color: $secondary;
 }
 
 .contact__social-container {
@@ -218,12 +288,12 @@ padding: 20px 0;
 
 .contact__social-icon {
   margin-bottom: 10px;
-  color: #000000;
+  color: $primary;
 }
 
 .contact__address {
   text-align: center;
-  color: #000000;
+  color: $primary;
 }
 
 /*
