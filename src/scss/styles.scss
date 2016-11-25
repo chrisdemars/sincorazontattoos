@@ -146,6 +146,10 @@ padding: 20px 0;
     url(/dist/img/intro-ink.jpg) no-repeat center center fixed;
   background-size: cover;
   background-color: $primary;
+
+  a {
+    color: $tertiary;
+  }
 }
 
 .news__container {
