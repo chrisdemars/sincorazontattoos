@@ -184,14 +184,22 @@ padding: 20px 0;
 }
 
 .work__image-container {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-top: 25px;
+  justify-content: center;
 }
 
 .work__image {
   display: inline-block;
   border: solid 1px $primary;
   margin-bottom: 20px;
+  object-fit: cover;
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  box-shadow: 3px 3px 25px 5px rgba(0, 0, 0, .5);
 }
 
 /*
